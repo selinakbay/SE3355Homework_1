@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Results</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Search Results for "<%= query %>"</h1>
+  <ul>
+    <% products.forEach(product => { %>
+      <li>
+        <a href="/product/<%= product.id %>">
+          <strong><%= product.description %></strong> - <%= product.price %> - <%= product.city %>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
